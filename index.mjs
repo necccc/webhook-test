@@ -15,7 +15,7 @@ fastify.post('/webhook-test', function (request, reply) {
 });
 
 // Run the server!
-fastify.listen({ port: 3000 }, function (err, address) {
+fastify.listen({ port: process.env.PORT ?? 3000 }, function (err, address) {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
