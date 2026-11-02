@@ -14,8 +14,10 @@ fastify.post('/webhook-test', function (request, reply) {
   reply.status(200).send('Ok');
 });
 
-// Declare a route
 fastify.get('/health', function (request, reply) {
+  reply.status(200).send('Ok');
+});
+fastify.get('/', function (request, reply) {
   reply.status(200).send('Ok');
 });
 
