@@ -14,6 +14,11 @@ fastify.post('/webhook-test', function (request, reply) {
   reply.status(200).send('Ok');
 });
 
+// Declare a route
+fastify.get('/', function (request, reply) {
+  reply.status(200).send('Ok');
+});
+
 // Run the server!
 fastify.listen({ port: process.env.PORT ?? 3000 }, function (err, address) {
   if (err) {
