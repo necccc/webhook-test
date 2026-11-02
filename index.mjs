@@ -14,6 +14,14 @@ fastify.post('/webhook-test', function (request, reply) {
   reply.status(200).send('Ok');
 });
 
+fastify.get('/webhook-test', function (request, reply) {
+  console.log({
+    headers: request.headers,
+  });
+
+  reply.status(200).send('Ok');
+});
+
 fastify.get('/health', function (request, reply) {
   reply.status(200).send('Ok');
 });
